@@ -1,0 +1,28 @@
+name: Run jest tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run jest tests
+      run: npm run test
+      env:
+        YANDEX_DISK_POLYGON_OAUTH_TOKEN: ${{ secrets.YANDEX_DISK_POLYGON_OAUTH_TOKEN }}
