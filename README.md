@@ -4,7 +4,12 @@
     </a>
     <br>
     OZON Банк Weekend Offer
+
 </h2>
+
+<p align="center">
+    <img src="https://github.com/bystrniki/ozon-bank-weekend-offer/actions/workflows/jest.yml/badge.svg" alt="example workflow">
+</p>
 
 > [!NOTE]
 > Данный репозиторий содержит реализацию и инструкцию по запуску тестового задания на TypeScript для участия в [Weekend Offer](https://ozon-weekend-offer.ru/#application) 25-26 Октября.
